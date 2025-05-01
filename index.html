@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Art Gallery</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .header {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header-bar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #site-logo a {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+        .main-nav {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        .main-nav li {
+            margin-left: 20px;
+        }
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+        }
+        .portfolio-grid {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+        .portfolio-item {
+            border: 1px solid #eee;
+            padding: 15px;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .post-title {
+            font-size: 18px;
+            margin: 10px 0 5px;
+        }
+        .entry-content {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body class="home">
+    <div id="pagewrap" class="hfeed site">
+        <div id="headerwrap">
+            <header id="header" class="pagewidth">
+                <div class="header-bar">
+                    <div id="site-logo">
+                        <a href="index.html" title="AI Art Gallery">AI Art Gallery</a>
+                    </div>
+                    <!-- <nav id="main-nav-wrap">
+                        <ul id="main-nav" class="main-nav">
+                            <li class="current-menu-item"><a href="index.html" aria-current="page">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="schedule.html">Schedule</a></li>
+                        </ul>
+                    </nav> -->
+                </div>
+            </header>
+        </div>
+
+        <div id="body">
+            <div id="layout" class="pagewidth">
+                <main id="content">
+                    <div class="portfolio-grid">
+                        <!-- Portfolio Item 1 -->
+                        <article class="portfolio-item">
+                            <figure class="post-image">
+                                <a href="project1.html">
+                                    <img src="https://via.placeholder.com/300x400" alt="Project 1">
+                                </a>
+                            </figure>
+                            <div class="post-content">
+                                <h2 class="post-title"><a href="project1.html">Jessica Tucker</a></h2>
+                                <div class="entry-content">
+                                    <p>pooling, 2024 4-part/ongoing video loop series with photos, face-tracking AR, machine learning, and digital animation...</p>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <!-- Portfolio Item 2 -->
+                        <article class="portfolio-item">
+                            <figure class="post-image">
+                                <a href="project2.html">
+                                    <img src="https://via.placeholder.com/300x400" alt="Project 2">
+                                </a>
+                            </figure>
+                            <div class="post-content">
+                                <h2 class="post-title"><a href="project2.html">Alexander Rusnak</a></h2>
+                                <div class="entry-content">
+                                    <p>Relative Pose Constraint (2024) Concept "It is a kind of naiveté and arrogance to think that this thing stays forever..."</p>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <!-- 可以继续添加更多项目 -->
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
