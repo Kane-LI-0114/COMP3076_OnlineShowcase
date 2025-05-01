@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>AI Art Gallery</title>
+    <title>COMP3076 Online Showcase</title>
     <style>
         body {
             font-family: sans-serif;
@@ -44,7 +44,7 @@
         }
 
         .logo-img {
-            width: 50px;
+            width: 100px;
             height: auto;
             margin: 5px 10px 5px 10px;
         }
@@ -148,8 +148,12 @@
             background-color: #fff;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            margin: 20px 50px 0px 50px;
-            flex-grow: 1;
+            margin: 20px 50px 20px 50px;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
         }
 
         /* 表格样式 */
@@ -182,8 +186,8 @@
         }
 
         .table-image {
-            width: 200px;
-            height: auto;
+            width: auto;
+            height: 150px;
             margin: 0 auto;
             display: block;
             align-self: center;
@@ -198,8 +202,7 @@
                 <div class="header-bar">
                     <div id="site-logo">
                         <a href="index.html" title="AI Art Gallery">
-                            <img src="images/HKBU_Logo.png" alt="AI Art Gallery Logo" class="logo-img">
-                            AI Art Gallery
+                            COMP3076 Online Showcase
                         </a>
                     </div>
                 </div>
@@ -209,7 +212,7 @@
         <div id="body">
             <div id="layout" class="pagewidth">
                 <main id="content">
-                    <h2 class="card-title">Images</h2>
+                    <h2 class="card-title">Result Image Showcases</h2>
                     <div class="background-card">
                         <div class="portfolio-grid">
                             <article class="portfolio-item">
