@@ -103,11 +103,6 @@
             transition: transform 0.3s ease;
         }
 
-        /* 悬停时轻微放大（可选） */
-        .post-image:hover img {
-            transform: scale(1.05);
-        }
-
         /* 悬停文字部分 */
         .post-content {
             border-radius: 8px;
@@ -122,8 +117,14 @@
             transition: transform 0.3s ease;
         }
 
+        /* hover item 拉起文字 */
         .portfolio-item:hover .post-content {
             transform: translateY(0);
+        }
+
+        /* hover item 放大图片 */
+        .portfolio-item:hover .post-image img {
+            transform: scale(1.05);
         }
 
         .post-title a {
@@ -137,12 +138,55 @@
             text-align: justify;
         }
 
+        .card-title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
         .background-card {
             background-color: #fff;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            margin: 50px 50px 0px 50px;
+            margin: 20px 50px 0px 50px;
             flex-grow: 1;
+        }
+
+        /* 表格样式 */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 12px 15px;
+            text-align: center;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+            border-right: 1px solid #e0e0e0;
+        }
+
+        .data-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .data-table tbody tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .table-image {
+            width: 200px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+            align-self: center;
         }
     </style>
 </head>
@@ -165,6 +209,7 @@
         <div id="body">
             <div id="layout" class="pagewidth">
                 <main id="content">
+                    <h2 class="card-title">Images</h2>
                     <div class="background-card">
                         <div class="portfolio-grid">
                             <article class="portfolio-item">
@@ -199,7 +244,7 @@
                                     <img src="images/IMG_7436_v.jpg" alt="cat">
                                 </figure>
                                 <div class="post-content">
-                                    <h2 class="post-title"><a href="project1.html">Cat</a></h2>
+                                    <h2 class="post-title"><a href="project1.html">Mountain</a></h2>
                                     <div class="entry-content">
                                         <p>pooling, 2024 4-part/ongoing video loop series with photos, face-tracking AR,
                                             machine learning, and digital animation...</p>
@@ -212,7 +257,7 @@
                                     <img src="images/IMG_7517.jpg" alt="cloud">
                                 </figure>
                                 <div class="post-content">
-                                    <h2 class="post-title"><a href="project2.html">Cloud</a></h2>
+                                    <h2 class="post-title"><a href="project2.html">Flower</a></h2>
                                     <div class="entry-content">
                                         <p>Relative Pose Constraint (2024) Concept "It is a kind of naiveté and
                                             arrogance to
@@ -221,6 +266,34 @@
                                 </div>
                             </article>
                         </div>
+                    </div>
+
+                    <h2 class="card-title">Table</h2>
+                    <div class="background-card">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Index</th>
+                                    <th>Original Animal Image</th>
+                                    <th>Original Cloud Image</th>
+                                    <th>Result Image</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><img src="images/cat.jpg" alt="cat" class="table-image"></td>
+                                    <td><img src="images/cloud.jpg" alt="cat" class="table-image"></td>
+                                    <td><img src="images/cat.jpg" alt="cat" class="table-image"></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><img src="images/cat.jpg" alt="cat" class="table-image"></td>
+                                    <td><img src="images/cloud.jpg" alt="cat" class="table-image"></td>
+                                    <td><img src="images/cat.jpg" alt="cat" class="table-image"></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </main>
             </div>
