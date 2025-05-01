@@ -79,32 +79,38 @@
             overflow: hidden;
             border-radius: 8px;
             height: 200px;
+            width: 100%;
             background-color: white;
             box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+            align-items: center;
         }
 
+        /* 图片容器 */
         .post-image {
-            position: absolute;
-            /* 覆盖卡片 */
-            top: 1;
-            left: 1;
-            right: 1;
-            bottom: 1;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
         }
 
+        /* 图片元素 */
         .post-image img {
-            position: relative;
-            margin-top: -5px;
-            margin-left: -30px;
-            width: 130%;
-            height: 130%;
+            margin: -5px 0 0 -25px;
+            width: 90%;
+            height: 90%;
             object-fit: cover;
-            display: block;
-            transform-origin: center center;
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+
+        /* 悬停时轻微放大（可选） */
+        .post-image:hover img {
+            transform: scale(1.05);
         }
 
         /* 悬停文字部分 */
         .post-content {
+            border-radius: 8px;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -161,7 +167,6 @@
                 <main id="content">
                     <div class="background-card">
                         <div class="portfolio-grid">
-                            <!-- Item 1 -->
                             <article class="portfolio-item">
                                 <figure class="post-image">
                                     <img src="images/cat.jpg" alt="cat">
@@ -175,10 +180,36 @@
                                 </div>
                             </article>
 
-                            <!-- Item 2 -->
                             <article class="portfolio-item">
                                 <figure class="post-image">
                                     <img src="images/cloud.jpg" alt="cloud">
+                                </figure>
+                                <div class="post-content">
+                                    <h2 class="post-title"><a href="project2.html">Cloud</a></h2>
+                                    <div class="entry-content">
+                                        <p>Relative Pose Constraint (2024) Concept "It is a kind of naiveté and
+                                            arrogance to
+                                            think that this thing stays forever..."</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="portfolio-item">
+                                <figure class="post-image">
+                                    <img src="images/IMG_7436_v.jpg" alt="cat">
+                                </figure>
+                                <div class="post-content">
+                                    <h2 class="post-title"><a href="project1.html">Cat</a></h2>
+                                    <div class="entry-content">
+                                        <p>pooling, 2024 4-part/ongoing video loop series with photos, face-tracking AR,
+                                            machine learning, and digital animation...</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="portfolio-item">
+                                <figure class="post-image">
+                                    <img src="images/IMG_7517.jpg" alt="cloud">
                                 </figure>
                                 <div class="post-content">
                                     <h2 class="post-title"><a href="project2.html">Cloud</a></h2>
