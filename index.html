@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +12,13 @@
             padding: 0;
             line-height: 1.6;
         }
+
         .header {
             background: #fff;
             padding: 20px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         .header-bar {
             max-width: 1200px;
             margin: 0 auto;
@@ -23,24 +26,29 @@
             justify-content: space-between;
             align-items: center;
         }
+
         #site-logo a {
             font-size: 24px;
             font-weight: bold;
             text-decoration: none;
             color: #333;
         }
+
         .main-nav {
             display: flex;
             list-style: none;
             padding: 0;
         }
+
         .main-nav li {
             margin-left: 20px;
         }
+
         .main-nav a {
             text-decoration: none;
             color: #333;
         }
+
         .portfolio-grid {
             max-width: 1200px;
             margin: 40px auto;
@@ -49,25 +57,64 @@
             gap: 20px;
             padding: 0 20px;
         }
+
         .portfolio-item {
             border: 1px solid #eee;
             padding: 15px;
         }
+
         .portfolio-item img {
             width: 100%;
             height: auto;
             display: block;
         }
+
         .post-title {
             font-size: 18px;
             margin: 10px 0 5px;
         }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .post-image {
+            position: relative;
+        }
+
+        /* 悬停部分文字 */
         .entry-content {
-            font-size: 14px;
+            font-size: 0.9rem;
+            line-height: 1.5;
             color: #666;
+        }
+
+        /* 调整悬停伸展部分样式 */
+        .post-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.8);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover .post-content {
+            transform: translateY(0);
+        }
+
+        .post-title {
+            color: white;
+            margin: 0 0 10px 0;
         }
     </style>
 </head>
+
 <body class="home">
     <div id="pagewrap" class="hfeed site">
         <div id="headerwrap">
@@ -91,41 +138,42 @@
             <div id="layout" class="pagewidth">
                 <main id="content">
                     <div class="portfolio-grid">
-                        <!-- Portfolio Item 1 -->
+                        <!-- Item 1 -->
                         <article class="portfolio-item">
                             <figure class="post-image">
                                 <a href="project1.html">
-                                    <img src="https://via.placeholder.com/300x400" alt="Project 1">
+                                    <img src="images/cat.jpg" alt="cat">
                                 </a>
                             </figure>
                             <div class="post-content">
                                 <h2 class="post-title"><a href="project1.html">Jessica Tucker</a></h2>
                                 <div class="entry-content">
-                                    <p>pooling, 2024 4-part/ongoing video loop series with photos, face-tracking AR, machine learning, and digital animation...</p>
+                                    <p>pooling, 2024 4-part/ongoing video loop series with photos, face-tracking AR,
+                                        machine learning, and digital animation...</p>
                                 </div>
                             </div>
                         </article>
-                        
-                        <!-- Portfolio Item 2 -->
+
+                        <!-- Item 2 -->
                         <article class="portfolio-item">
                             <figure class="post-image">
                                 <a href="project2.html">
-                                    <img src="https://via.placeholder.com/300x400" alt="Project 2">
+                                    <img src="images/cat.jpg" alt="cat">
                                 </a>
                             </figure>
                             <div class="post-content">
                                 <h2 class="post-title"><a href="project2.html">Alexander Rusnak</a></h2>
                                 <div class="entry-content">
-                                    <p>Relative Pose Constraint (2024) Concept "It is a kind of naiveté and arrogance to think that this thing stays forever..."</p>
+                                    <p>Relative Pose Constraint (2024) Concept "It is a kind of naiveté and arrogance to
+                                        think that this thing stays forever..."</p>
                                 </div>
                             </div>
                         </article>
-                        
-                        <!-- 可以继续添加更多项目 -->
                     </div>
                 </main>
             </div>
         </div>
     </div>
 </body>
+
 </html>
