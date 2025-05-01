@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>AI Art Gallery</title>
     <style>
         body {
@@ -11,6 +13,10 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         .header {
@@ -19,19 +25,28 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
+        /* 导航栏样式 */
         .header-bar {
-            max-width: 1200px;
-            margin: 0 auto;
+            background: linear-gradient(135deg, #FF8C00, #FFA500, #FFD700, #FFFFFF);
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
         }
 
         #site-logo a {
-            font-size: 24px;
-            font-weight: bold;
+            display: flex;
+            align-items: center;
             text-decoration: none;
-            color: #333;
+            /* 移除链接下划线 */
+            color: black;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: auto;
+            margin: 5px 10px 5px 10px;
         }
 
         .main-nav {
@@ -58,48 +73,45 @@
             padding: 0 20px;
         }
 
-        .portfolio-item {
-            border: 1px solid #eee;
-            padding: 15px;
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .post-title {
-            font-size: 18px;
-            margin: 10px 0 5px;
-        }
-
+        /* 卡片 */
         .portfolio-item {
             position: relative;
             overflow: hidden;
             border-radius: 8px;
+            height: 200px;
+            background-color: white;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
         }
 
         .post-image {
+            position: absolute;
+            /* 覆盖卡片 */
+            top: 1;
+            left: 1;
+            right: 1;
+            bottom: 1;
+        }
+
+        .post-image img {
             position: relative;
+            margin-top: -5px;
+            margin-left: -30px;
+            width: 130%;
+            height: 130%;
+            object-fit: cover;
+            display: block;
+            transform-origin: center center;
         }
 
-        /* 悬停部分文字 */
-        .entry-content {
-            font-size: 0.9rem;
-            line-height: 1.5;
-            color: #666;
-        }
-
-        /* 调整悬停伸展部分样式 */
+        /* 悬停文字部分 */
         .post-content {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.8);
-            color: white;
-            padding: 15px;
+            background: rgba(255, 255, 255, 0.7);
+            color: black;
+            padding: 18px;
             transform: translateY(100%);
             transition: transform 0.3s ease;
         }
@@ -108,9 +120,23 @@
             transform: translateY(0);
         }
 
-        .post-title {
-            color: white;
-            margin: 0 0 10px 0;
+        .post-title a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .entry-content {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        .background-card {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 50px 50px 0px 50px;
+            flex-grow: 1;
         }
     </style>
 </head>
@@ -121,15 +147,11 @@
             <header id="header" class="pagewidth">
                 <div class="header-bar">
                     <div id="site-logo">
-                        <a href="index.html" title="AI Art Gallery">AI Art Gallery</a>
+                        <a href="index.html" title="AI Art Gallery">
+                            <img src="images/HKBU_Logo.png" alt="AI Art Gallery Logo" class="logo-img">
+                            AI Art Gallery
+                        </a>
                     </div>
-                    <!-- <nav id="main-nav-wrap">
-                        <ul id="main-nav" class="main-nav">
-                            <li class="current-menu-item"><a href="index.html" aria-current="page">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="schedule.html">Schedule</a></li>
-                        </ul>
-                    </nav> -->
                 </div>
             </header>
         </div>
@@ -137,38 +159,37 @@
         <div id="body">
             <div id="layout" class="pagewidth">
                 <main id="content">
-                    <div class="portfolio-grid">
-                        <!-- Item 1 -->
-                        <article class="portfolio-item">
-                            <figure class="post-image">
-                                <a href="project1.html">
+                    <div class="background-card">
+                        <div class="portfolio-grid">
+                            <!-- Item 1 -->
+                            <article class="portfolio-item">
+                                <figure class="post-image">
                                     <img src="images/cat.jpg" alt="cat">
-                                </a>
-                            </figure>
-                            <div class="post-content">
-                                <h2 class="post-title"><a href="project1.html">Jessica Tucker</a></h2>
-                                <div class="entry-content">
-                                    <p>pooling, 2024 4-part/ongoing video loop series with photos, face-tracking AR,
-                                        machine learning, and digital animation...</p>
+                                </figure>
+                                <div class="post-content">
+                                    <h2 class="post-title"><a href="project1.html">Cat</a></h2>
+                                    <div class="entry-content">
+                                        <p>pooling, 2024 4-part/ongoing video loop series with photos, face-tracking AR,
+                                            machine learning, and digital animation...</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
 
-                        <!-- Item 2 -->
-                        <article class="portfolio-item">
-                            <figure class="post-image">
-                                <a href="project2.html">
-                                    <img src="images/cat.jpg" alt="cat">
-                                </a>
-                            </figure>
-                            <div class="post-content">
-                                <h2 class="post-title"><a href="project2.html">Alexander Rusnak</a></h2>
-                                <div class="entry-content">
-                                    <p>Relative Pose Constraint (2024) Concept "It is a kind of naiveté and arrogance to
-                                        think that this thing stays forever..."</p>
+                            <!-- Item 2 -->
+                            <article class="portfolio-item">
+                                <figure class="post-image">
+                                    <img src="images/cloud.jpg" alt="cloud">
+                                </figure>
+                                <div class="post-content">
+                                    <h2 class="post-title"><a href="project2.html">Cloud</a></h2>
+                                    <div class="entry-content">
+                                        <p>Relative Pose Constraint (2024) Concept "It is a kind of naiveté and
+                                            arrogance to
+                                            think that this thing stays forever..."</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
+                        </div>
                     </div>
                 </main>
             </div>
