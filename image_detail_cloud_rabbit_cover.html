@@ -233,6 +233,21 @@
             height: auto;
             margin: 5px 10px 5px 10px;
         }
+
+        .text-title {
+            margin: 10px 250px;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            text-align: justify;
+            font-weight: bold;
+        }
+
+        .text {
+            margin: 0px 250px;
+            font-size: 0.9rem;
+            line-height: 2;
+            text-align: justify;
+        }
     </style>
 </head>
 
@@ -261,6 +276,36 @@
                             <figure style="position: relative;">
                                 <img src="images/cloud_cover_rabbit.png" alt="cloud_cat" style="align-self: center;">
                             </figure>
+                        </div>
+
+                        <div class="text-title">
+                            Prompt:
+                        </div>
+
+                        <div class="text">
+                            A cloud that looks like a rabbit, cloud texture, high resolution,
+                            realistic cloud texture, a cloud with shape of rabbit face, cloud with pure
+                            white color.
+                        </div>
+
+                        <div class="text-title">
+                            Parameters:
+                        </div>
+                        <div class="text">
+                            Model: dreamshaper8_inpainting, <br>
+                            Lora: cloud_animal_lora(ours), <br>
+                            ControlNet: sd1.5-canny,<br>
+                            Lora intensity: 1.00, <br>
+                            CLIP intensity: 1.00,<br>
+                            ControlNet strength: 1.00,<br>
+                            Canny threshold: low-0.05, high-0.90<br>
+                            <br>
+                            K-sampler:<br>
+                            seed: 135, step: 40, <br>
+                            cfg:19.2, <br>
+                            sampler: euler, <br>
+                            scheduler: normal, <br>
+                            denoise: 1.00
                         </div>
                     </div>
 
